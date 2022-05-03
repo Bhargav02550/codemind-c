@@ -1,18 +1,15 @@
-
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int a, n;
-    scanf("%d", &n);
-    for(a = 0; a <= n; a++)
+    int n,i;
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
     {
-        if (n == a * a)
+        if(n==i*i)
         {
             printf("True");
             return 0;
         }
     }
     printf("False");
-    return 0;
 }
