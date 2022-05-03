@@ -1,26 +1,34 @@
 #include<stdio.h>
 #include<math.h>
+int l(int n)
+{
+    int h=0;
+    while(n!=0)
+    {
+        h++;
+        n/=10;
+    }
+    return h;
+}
 int main()
 {
-    int num;
-    scanf("%d",&num);
-    int num1=num,c=0;
-    while(num1!=0)
+    int s=0,r,m,le,t;
+    scanf("%d",&m);
+    le=l(m);
+    t=m;
+    while(t>0)
     {
-        num1/=10;
-        c++;
+        r=t%10;
+        s=s+(int)pow(r,le);
+        t=t/10;
+        le--;
     }
-    num1=num;
-    int sum=0;
-    while(num1!=0)
+    if(m==s)
     {
-        int rem=num1%10;
-        sum+=pow(rem,c);
-        num1/=10;
-        c--;
+        printf("True");
     }
-   if(sum==num)
-    printf("True");
-   else
-    printf("False");
+    else
+    {
+        printf("False");
+    }
 }
