@@ -14,11 +14,11 @@ int p(int n)
 }
 int main()
 {
-    int n,i;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
-    {
-        int n,i,d1,d2,d11,d22;
+	int n,i;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		int n,i,d1,d2,d11,d22;
 	scanf("%d",&n);
 	for(i=n;;i--)
 	{
@@ -38,13 +38,13 @@ int main()
 	}
 	if(n-d1>d2-n)
 	{
-	    printf("%d
+		printf("%d
 ",d2);
 	}
 	else
 	{
-	    printf("%d
+		printf("%d
 ",d1);
 	}
-    }
+	}
 }
