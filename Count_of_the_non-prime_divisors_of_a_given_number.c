@@ -2,7 +2,7 @@
 int p(int n)
 {
     int i;
-    for(i=2;i<n;i++)
+    for(i=2;i<=n/2;i++)
     {
         if(n%i==0)
         {
@@ -11,9 +11,9 @@ int p(int n)
     }
     return 1;
 }
-int np(int n)
+int d(int n)
 {
-    int i,d,c=0,j=0;
+    int i,c=0,c1=0;
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
@@ -24,15 +24,15 @@ int np(int n)
             }
             else
             {
-                j++;
+                c1++;
             }
         }
     }
-    return j+1;
+    return c1;
 }
 int main()
 {
     int n;
-    scanf("%d",&n );
-    printf("%d",np(n));
+    scanf("%d",&n);
+    printf("%d",d(n)+1);
 }
