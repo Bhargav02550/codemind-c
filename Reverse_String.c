@@ -1,21 +1,24 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+
+void printReverse(char str[])
+{
+	int length = strlen(str);
+	int i;
+	for (i = length - 1; i >= 0; i--) {
+		if (str[i] == ' ') 
+		{
+			str[i] = NULL;
+			printf("%s ", &(str[i]) + 1);
+		}
+	}
+	printf("%s", str);
+}
 int main()
 {
 	char str[100];
-	int i,j,length,temp;
 	scanf("%[^
 ]s",str);
-	for(i=0;str[i]!=NULL;i++);
-	length=i;
-	i=0;
-	j=length-1;
-	while(i<j)
-	{
-		temp=str[j];
-		str[j]=str[i];
-		str[i]=temp;
-		i++;
-		j--;
-	}
-	printf("%s",str);
-} 
+	printReverse(str);
+	return 0;
+}
